@@ -20,7 +20,7 @@ And place "config.json" to `~/.config/swaync/config.json`
 
 Then, run:
 
-`chmod +x ~/.config/hyde/wallbash/scripts`
+`chmod +x ~/.config/hyde/wallbash/scripts/swaync.sh`
 
 Finally, run:
 
