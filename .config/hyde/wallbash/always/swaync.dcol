@@ -1,37 +1,318 @@
 ${confDir}/swaync/style.css|${WALLBASH_SCRIPTS}/swaync.sh
+* {
+  all: unset;
+  transition: 200ms;
+}
 
+trough highlight {
+  background: #<wallbash_txt1>;
+}
 
-@define-color cc-bg #<wallbash_pry1>;
-@define-color noti-border-color #<wallbash_1xa1>;
+scale {
+  margin: 0 7px;
+}
 
-@define-color noti-bg #<wallbash_pry1>;
-@define-color noti-bg-hover #<wallbash_4xa2>;
+scale trough {
+  margin: 0rem 1rem;
+  min-height: 8px;
+  min-width: 70px;
+  border-radius: 0px;
+}
 
-@define-color noti-bg-opaque #<wallbash_pry3>;
-@define-color noti-bg-hover-opaque #<wallbash_4xa3>;
-/* @define-color noti-bg-darker rgb(38, 38, 38); */
-/* @define-color noti-bg-focus #wallbash_pry3; */
-/* @define-color noti-close-bg rgba(255, 255, 255, 0.1); */
-/* @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15); */
-@define-color text-color #<wallbash_txt2>;
-@define-color text-color-disabled #<wallbash_txt4>;
+trough slider {
+  margin: -10px;
+  border-radius: 0px;
+  transition: all 0.2s ease;
+  background-color: #<wallbash_1xa9>;
+}
 
+trough {
+  background-color: #<wallbash_pry2>;
+}
 
-/* @define-color noti-border-color #<wallbash_pry3>; */
-.notification-row .notification-background .notification {
-  /* The actual notification */
-  border-radius: 12px;
-  border: 2px solid @noti-border-color;
-  padding: 5;
-  transition: background 0.15s ease-in-out;
-  background: @noti-bg;
+/* notifications */
+.notification-background {
+  border-radius: 0px;
+  border: 1px solid #<wallbash_1xa9>;
+  margin: 18px;
+  background: #<wallbash_pry1>;
+  color: #<wallbash_txt1>;
+  padding: 0;
+}
+
+.notification-background .notification {
+  padding: 7px;
+  border-radius: 0px;
+}
+
+.notification .notification-content {
+  margin: 7px;
+}
+
+.notification .notification-content overlay {
+  /* icons */
+  margin: 4px;
+}
+
+.notification-content .summary {
+  color: #<wallbash_txt1>;
+}
+
+.notification-content .time {
+  color: #<wallbash_1xa7>;
+}
+
+.notification-content .body {
+  color: #<wallbash_1xa8>;
+}
+
+.notification > *:last-child > * {
+  min-height: 3.4em;
+}
+
+.notification-background .close-button {
+  margin: 7px;
+  padding: 2px;
+  border-radius: 0px
+  color: #<wallbash_pry2>;
+  background-color: #<wallbash_pry1>;
+}
+
+.notification-background .close-button:hover {
+  background-color: #<wallbash_pry1>;
+}
+
+.notification-background .close-button:active {
+  background-color: #<wallbash_pry1>;
+}
+
+.notification .notification-action {
+  border-radius: 0px
+  color: #<wallbash_txt1>;
+  margin: 4px;
+  padding: 8px;
+  font-size: 0.2rem; /* controls the button size not text size*/
+}
+
+.notification .notification-action {
+  background-color: #<wallbash_pry2>;
+}
+
+.notification .notification-action:hover {
+  background-color: #<wallbash_pry2>;
+}
+
+.notification .notification-action:active {
+  background-color: #<wallbash_pry2>;
+}
+
+.notification.critical progress {
+  background-color: #<wallbash_pry1xa5>;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: #<wallbash_1xa9>;
+}
+
+.notification progress,
+.notification trough,
+.notification progressbar {
+  border-radius: 0px;
+  padding: 3px 0;
+}
+
+/* control center */
+.control-center {
+  border-radius: 0px;
+  border: 1px solid #<wallbash_1xa9>;
+  background-color: #<wallbash_pry1>;
+  color: #<wallbash_txt1>;
+  padding: 14px;
+}
+
+.control-center .notification-background {
+  border-radius: 0px
+  box-shadow: inset 0 0 0 1px #<wallbash_pry2>;
+  margin: 4px 10px;
+}
+
+.control-center .notification-background .notification {
+  border-radius: 0px
+}
+
+.control-center .notification-background .notification.low {
   opacity: 0.8;
 }
 
-.control-center {
-  /* The Control Center which contains the old notifications + widgets */
-  background: @cc-bg;
-  color: @text-color;
-  border-radius: 12px;
+.control-center .widget-title > label {
+  color: #<wallbash_txt1>;
+  font-size: 1.3em;
+}
+
+.control-center .widget-title button {
+  border-radius: 0px
+  color: #<wallbash_txt1>;
+  background-color: #<wallbash_pry2>;
+  box-shadow: inset 0 0 0 1px #<wallbash_pry2>;
+  padding: 8px;
+}
+
+.control-center .widget-title button:hover {
+  background-color: #<wallbash_pry2>;
+}
+
+.control-center .widget-title button:active {
+  background-color: #<wallbash_pry2>;
+}
+
+.control-center .notification-group {
+  margin-top: 10px;
+}
+
+.control-center .notification-group:focus .notification-background {
+  background-color: #<wallbash_pry2>;
+}
+
+scrollbar slider {
+  margin: -3px;
+  opacity: 0.8;
+}
+
+scrollbar trough {
+  margin: 2px 0;
+}
+
+/* dnd */
+.widget-dnd {
+  margin-top: 5px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 8px;
+  background: #<wallbash_pry2>;
+  box-shadow: inset 0 0 0 1px #<wallbash_pry2>;
+}
+
+.widget-dnd > switch:checked {
+  background: #<wallbash_1xa9>;
+}
+
+.widget-dnd > switch slider {
+  background: #<wallbash_pry1>;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #<wallbash_pry2>;
+}
+
+/* mpris */
+.widget-mpris-player {
+  background: #<wallbash_pry2>;
+  border-radius: 0px;
+  color: #<wallbash_txt1>;
+}
+
+.mpris-overlay {
+  background-color: #<wallbash_pry2>;
   opacity: 0.9;
+  padding: 15px 10px;
+}
+
+.widget-mpris-album-art {
+  -gtk-icon-size: 100px;
+  border-radius: 0px;
+  margin: 0 10px;
+}
+
+.widget-mpris-title {
+  font-size: 1.2rem;
+  color: #<wallbash_txt1>;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1rem;
+  color: #<wallbash_1xa8>;
+}
+
+.widget-mpris button {
+  border-radius: 0px;
+  color: #<wallbash_txt1>;
+  margin: 0 5px;
+  padding: 2px;
+}
+
+.widget-mpris button image {
+  -gtk-icon-size: 1.8rem;
+}
+
+.widget-mpris button:hover {
+  background-color: #<wallbash_pry2>;
+}
+
+.widget-mpris button:active {
+  background-color: #<wallbash_pry2>;
+}
+
+.widget-mpris button:disabled {
+  opacity: 0.5;
+}
+
+.widget-menubar > box > .menu-button-bar > button > label {
+  font-size: 3rem;
+  padding: 0.5rem 2rem;
+}
+
+.widget-menubar > box > .menu-button-bar > :last-child {
+  color: #<wallbash_pry1xa5>;
+}
+
+.power-buttons button:hover,
+.powermode-buttons button:hover,
+.screenshot-buttons button:hover {
+  background: #<wallbash_pry2>;
+}
+
+.control-center .widget-label > label {
+  color: #<wallbash_txt1>;
+  font-size: 2rem;
+}
+
+.widget-buttons-grid {
+  padding-top: 1rem;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+  font-size: 2.5rem;
+}
+
+.widget-volume {
+  padding: 1rem 0;
+}
+
+.widget-volume label {
+  color: #<wallbash_pry1xa5>;
+  padding: 0 1rem;
+}
+
+.widget-volume trough highlight {
+  background: #<wallbash_pry1xa5>;
+}
+
+.widget-backlight trough highlight {
+  background: #<wallbash_pry1xa6>;
+}
+
+.widget-backlight label {
+  font-size: 1.5rem;
+  color: #<wallbash_pry1xa6>;
+}
+
+.widget-backlight .KB {
+  padding-bottom: 1rem;
+}
+
+.image {
+  padding-right: 0.5rem;
 }
