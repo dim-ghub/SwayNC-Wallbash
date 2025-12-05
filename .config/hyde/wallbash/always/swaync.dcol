@@ -34,7 +34,7 @@ trough {
 .notification-background {
   border-radius: 0px;
   border: 1px solid #<wallbash_1xa9>;
-  margin: 18px;
+  margin: 8px;
   background: #<wallbash_pry1>;
   color: #<wallbash_txt1>;
   padding: 0;
