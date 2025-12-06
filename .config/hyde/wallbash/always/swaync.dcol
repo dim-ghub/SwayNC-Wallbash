@@ -3,6 +3,11 @@ ${confDir}/swaync/style.css|${WALLBASH_SCRIPTS}/swaync.sh
   all: unset;
   transition: 200ms;
 }
+:root {
+  --notification-icon-size: 64px;
+  --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
+  --notification-group-icon-size: 32px;
+}
 
 trough highlight {
   background: #<wallbash_txt1>;
@@ -310,4 +315,28 @@ scrollbar trough {
 
 .image {
   padding-right: 0.5rem;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .image {
+  /* Notification Primary Image */
+  -gtk-icon-filter: none;
+  -gtk-icon-size: var(--notification-icon-size);
+  border-radius: 100px;
+  /* Size in px */
+  margin: 4px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .app-icon {
+  /* Notification app icon (only visible when the primary image is set) */
+  -gtk-icon-filter: none;
+  -gtk-icon-size: var(--notification-app-icon-size);
+  -gtk-icon-shadow: 0 1px 4px black;
+  margin: 6px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .body-image {
+  /* The "extra" optional bottom notification image */
+  margin-top: 4px;
+  background-color: #<wallbash_pry2>;
+  -gtk-icon-filter: none;
 }
