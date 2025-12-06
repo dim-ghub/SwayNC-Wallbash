@@ -45,10 +45,6 @@ trough {
   border-radius: 0px;
 }
 
-.notification .notification-content {
-  margin: 7px;
-}
-
 .notification .notification-content overlay {
   /* icons */
   margin: 4px;
@@ -91,7 +87,7 @@ trough {
   color: #<wallbash_txt1>;
   margin: 4px;
   padding: 8px;
-  font-size: 0.2rem; /* controls the button size not text size*/
+  font-size: 0.5rem; /* controls the button size not text size*/
 }
 
 .notification .notification-action {
