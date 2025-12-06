@@ -86,8 +86,7 @@ trough {
   border-radius: 0px
   color: #<wallbash_txt1>;
   margin: 4px;
-  padding: 8px;
-  font-size: 0.5rem; /* controls the button size not text size*/
+  font-size: 1rem; /* controls the button size not text size*/
 }
 
 .notification .notification-action {
@@ -95,11 +94,11 @@ trough {
 }
 
 .notification .notification-action:hover {
-  background-color: #<wallbash_pry2>;
+  background-color: #<wallbash_pry3>;
 }
 
 .notification .notification-action:active {
-  background-color: #<wallbash_pry2>;
+  background-color: #<wallbash_pry4>;
 }
 
 .notification.critical progress {
