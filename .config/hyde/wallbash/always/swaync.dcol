@@ -71,15 +71,15 @@ trough {
   padding: 2px;
   border-radius: 0px
   color: #<wallbash_pry2>;
-  background-color: #<wallbash_pry1>;
+  background-color: rgba(<wallbash_pry1_rgb>, 0);
 }
 
 .notification-background .close-button:hover {
-  background-color: #<wallbash_pry1>;
+  background-color: rgba(<wallbash_pry1_rgb>, 0);
 }
 
 .notification-background .close-button:active {
-  background-color: #<wallbash_pry1>;
+  background-color: rgba(<wallbash_pry1_rgb>, 0);
 }
 
 .notification .notification-action {
